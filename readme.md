@@ -10,37 +10,46 @@
 
 バージョン番号が表示されればインストール成功です。
 
-バージョンが確認できない場合は、下記「Pythonがダウンロードされていない場合」を参照してPythonをローカル環境にインストールを行ってください。
+バージョンが確認できない場合は、下記「Pythonがダウンロードされていない場合」を参照してダウンロードする。
 
 ## 2. 仮想環境を立ち上げる
 
 1. 仮想環境を作成する
+
 `python -m venv env`
-でenvという名前の仮想環境が立ち上がる
+
+でenvという名前の仮想環境が立ち上がる。
+
 ここにライブラリなどをインストールしていきます。
 
 2. 仮想環境を立ち上げる
 
 macの場合
+
 `source env/bin/activate`
 
 windowsの場合
+
 `.\env\Scripts\activate`
 
 ターミナルを閉じた場合は毎回仮想環境の立ち上げを行う必要があります。
 
 ## 3. パッケージインストール
+
 `pip install -r requirements.txt`
 
 ## 4. DBの作成
 
 マイグレーションファイルの作成
+
 `python manage.py makemigrations`
 
 マイグレーション
+
 `python manage.py migrate`
 
 ## 4. サーバーを立ち上げる
+
 `python manage.py runserver`
 
 ## 動作確認
