@@ -40,11 +40,11 @@ windowsの場合
 
 ## 4. DBの作成
 
-マイグレーションファイルの作成
+1. マイグレーションファイルの作成
 
 `python manage.py makemigrations`
 
-マイグレーション
+2. マイグレーション
 
 `python manage.py migrate`
 
