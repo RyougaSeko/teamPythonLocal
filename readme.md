@@ -38,6 +38,8 @@ windowsの場合
 
 `pip install -r requirements.txt`
 
+envディレクトリ配下にパッケージがダウンロードされます。
+
 ## 4. DBの作成
 
 1. マイグレーションファイルの作成
