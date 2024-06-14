@@ -1,0 +1,29 @@
+{% extends '00_common/base.html' %}
+
+{% block title %}メモを追加{% endblock %}
+
+{% block content %}
+    <body class="bg-gray-100 flex items-center justify-center h-screen">
+        <div class="bg-white p-8 rounded shadow-md w-full max-w-md">
+            <h1 class="text-2xl font-bold mb-4">メモを追加</h1>
+            <form method="post">
+            {% csrf_token %}
+            {% for field in form %}
+                <div class="mb-4">
+                    {{ field.errors }}
+                    {{ field.label_tag }}
+                    <div class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500">
+                        {{ field }}
+                    </div>
+                    {% if field.name == "winner" %}
+                        <button type="button" class="mt-1 w-full bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700 transition duration-300" id="rollDice">サイコロを振る</button>
+                    {% endif %}
+                </div>
+            {% endfor %}
+            <button type="submit" class="w-full bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700 transition duration-300">保存</button>
+            <div class="mt-6">
+                <a href="{% url 'memos' %}" class="text-blue-500 hover:underline">メモ一覧に戻る</a>
+            </div>
+        </div>
+    </body>
+{% endblock %}

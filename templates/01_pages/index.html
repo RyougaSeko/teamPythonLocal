@@ -1,0 +1,12 @@
+{% extends '00_common/base.html' %}
+
+{% block content %}
+<body class="bg-gray-100 p-8">
+    <div class="container mx-auto bg-white shadow-md rounded-lg p-6">
+        <h1 class="text-2xl font-bold mb-4">カップルの仲良し度システム</h1>
+        <ul>
+            <li><a href="{% url 'memos' %}" class="text-blue-500 hover:underline">メモ一覧</a></li>
+        </ul>
+    </div>
+</body>
+{% endblock %}
