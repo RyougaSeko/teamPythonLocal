@@ -153,18 +153,6 @@ Python公式サイト: https://www.python.org/
     例: `<form method="post">{% csrf_token %} ... </form>`
 
 
-## 新規のテーブルをDBに追加する
-
-1. models.pyにmodelを追加
-2. migrationを行う
-```
-docker-compose exec web python manage.py makemigrations
-docker-compose exec web python manage.py migrate
-```
-
-3. postgresでテーブルが確認できればOK
-ただし、テーブル名は`Djangoに設定したアプリ名_テーブル名`になっています。
-
 ## DBに接続する方法
 
 ### teamPythonLocalディレクトリで、ターミナルにて下記を実行
