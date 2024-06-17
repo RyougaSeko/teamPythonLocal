@@ -167,22 +167,11 @@ docker-compose exec web python manage.py migrate
 
 ## DBに接続する方法
 
-方法①
+### teamPythonLocalディレクトリで、ターミナルにて下記を実行
+`sqlite3 db.sqlite3`
 
-コマンドラインからDockerコンテナ内のPostgreSQLに接続
-`docker-compose exec db psql -U user -d dbs`
+### DBに接続後テーブル一覧を確認
+`.tables`
 
-もしくは DockerDesktopのコンテナのexecから接続
-`psql -U user -d dbs`
-
-全テーブルの確認
-`\dt`
-
-特定のテーブルの詳細を見る
-`\d table_name`
-
-方法②
-pdAdminから確認
-
-## Django admin用アカウントの作成
-docker-compose exec web python manage.py createsuperuser
+### 試しにクエリを叩く
+`select * from love_dice_memo;`
