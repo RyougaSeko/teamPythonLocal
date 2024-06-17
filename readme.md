@@ -19,10 +19,14 @@
 1. ターミナルでteamPythonLocalディレクトリに移動する
 
 2. 以下のコマンドをターミナルで叩く
-   
+
+mac: 
 `python -m venv env`
 
-4. envという名前のフォルダがteamPythonLocalディレクトリ配下に作成されたことを確認する
+Windows:
+`python -m venv env`
+
+3. envという名前のフォルダがteamPythonLocalディレクトリ配下に作成されたことを確認する
 
 ここにライブラリなどをインストールしていきます。
 
